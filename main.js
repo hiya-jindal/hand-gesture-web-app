@@ -31,8 +31,8 @@ function check()
 }
 
 function speak(){
-    var synth = window.SpeechSynthesis;
-    speak_date_1 = "The first prediction is " + prediction_1;
+    var synth = window.speechSynthesis;
+    speak_data_1 = "The first prediction is " + prediction_1;
     speak_data_2 = "And the second prediction is " + prediction_2;
     var utterThis = new SpeechSynthesisUtterance(speak_data_1 + speak_data_2);
     synth.speak(utterThis);
@@ -62,15 +62,15 @@ function gotResult(error, results) {
         }
         if(results[1].label == "amazing")
         {
-            document.getElementById("update_emoji").innerHTML = "&#128076;";
+            document.getElementById("update_emoji2").innerHTML = "&#128076;";
         }
         if(results[1].label == "best")
         {
-            document.getElementById("update_emoji").innerHTML = "&#128077;";
+            document.getElementById("update_emoji2").innerHTML = "&#128077;";
         }
         if(results[1].label == "victory")
         {
-            document.getElementById("update_emoji").innerHTML = "&#9996;";
+            document.getElementById("update_emoji2").innerHTML = "&#9996;";
         }
     }
 }
